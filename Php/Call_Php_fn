@@ -1,0 +1,35 @@
+<!-- <?php
+//  jis bhi file me document upload karna h fn ko bss call karlena.
+// include 'file_upload_handler.php';
+// echo uploadFile('fileupload');
+?> -->
+
+<?php
+function uploadFile($inputName, $targetFolder = "uploads/") {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_FILES[$inputName])) {
+            $fileName = $_FILES[$inputName]['name'];
+            $fileTmpName = $_FILES[$inputName]['tmp_name'];
+            $fileError = $_FILES[$inputName]['error'];
+
+            echo "File Name: $fileName <br>";
+            echo "Temporary Location: $fileTmpName <br>";
+            echo "Error Code: $fileError <br>";
+
+            if ($fileError === 0) {
+                if (move_uploaded_file($fileTmpName, $targetFolder . uploadfile)) {
+                    return "✅ File uploaded successfully!";
+                } else {
+                    return "❌ Failed to move the file.";
+                }
+            } else {
+                return "❌ There was an error uploading your file.";
+            }
+        } else {
+            return "❌ No file uploaded with input name: $inputName.";
+        }
+    } else {
+        return "❌ Invalid request method.";
+    }
+}
+?>
