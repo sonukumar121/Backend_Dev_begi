@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>button click</title>
+</head>
+<body>
+    <form action="" method="post">
+       <button type="submit"name="button" value="btn1">
+        click
+    </button>
+   
+
+    </form>
+    
+   
+</body>
+</html>
+<?php
+     if (isset($_POST['button']))
+      {
+        btn();
+      }
+      function btn()
+      {
+        echo "button is clicked";
+      }
+    ?>
+ 
+
+
+
+//GET METHOD TO UPLOAD DOCUMENTS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="./get.php"  method="post"  enctype="multipart/form-data">
+        File_upload:
+        <input type="file" name="fileupload" id="fileupload">
+        <br>
+        <br>
+    
+         <button type="submit">upload</button>  
+    </form>
+   
+</body>
+</html>
+
+
+
+//PHP FILE OF GET
+
+
+<?php
+
+       $filename = $_FILES['fileupload']['name'];
+       $filetmpname = $_FILES['fileupload']['tmp_name'];
+        move_uploaded_file($filetmpname, __DIR__ . "/uploads/" . $filename);
+
+        {
+            echo "File uploaded successfully!";
+        }
+     
+?>
+
+// FULL SYNTAX TO ENSURE NO BUG IN FILE OR ERROR
+<!-- <?php
+//  jis bhi file me document upload karna h fn ko bss call karlena.
+// include 'file_upload_handler.php';
+// echo uploadFile('fileupload');
+?> -->
+
+<?php
+function uploadFile($inputName, $targetFolder = "uploads/") {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_FILES[$inputName])) {
+            $fileName = $_FILES[$inputName]['name'];
+            $fileTmpName = $_FILES[$inputName]['tmp_name'];
+            $fileError = $_FILES[$inputName]['error'];
+
+            echo "File Name: $fileName <br>";
+            echo "Temporary Location: $fileTmpName <br>";
+            echo "Error Code: $fileError <br>";
+
+            if ($fileError === 0) {
+                if (move_uploaded_file($fileTmpName, $targetFolder . uploadfile)) {
+                    return "✅ File uploaded successfully!";
+                } else {
+                    return "❌ Failed to move the file.";
+                }
+            } else {
+                return "❌ There was an error uploading your file.";
+            }
+        } else {
+            return "❌ No file uploaded with input name: $inputName.";
+        }
+    } else {
+        return "❌ Invalid request method.";
+    }
+}
+?>
