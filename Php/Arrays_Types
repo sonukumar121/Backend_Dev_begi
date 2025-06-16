@@ -1,0 +1,10 @@
+//1> ASSOCIATIVE-ARRAYS
+<?
+ $person=["name"=>"sonu","age"=>"20"];
+  foreach ($person as $key=>$data) 
+  {
+    echo $key." is ".$data;
+    echo "<br>";
+  }
+
+?>
