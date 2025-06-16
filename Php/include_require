@@ -1,0 +1,6 @@
+/ include files in php or require files
+for($i=0;$i<4;$i++)
+{
+   include_once("./include.php");
+}
+ ?>
