@@ -1,0 +1,9 @@
+
+// push,pop,splice(delete) elements in arrays
+// $name=["sonu","boss","aarav"];
+// array_push($name,"rahul");
+// array_pop($name);
+
+// array_splice($name,-2);
+// echo implode(",", $name);
+
