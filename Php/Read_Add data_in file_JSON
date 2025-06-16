@@ -1,0 +1,45 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+</head>
+<body>
+    <h4>Enter any file name</h4>
+     <form action="" method="post">
+      <input type="text" name="TEXT" placeholder="Enter any file name" >
+      <br>
+      <br>
+      <button type="submit" name="sub" style="background-color:red;" >click to genertae file</button>
+      </form> -->
+<!-- </body>
+</html> --> 
+
+<?php
+// $filename="dummy.txt";
+// $content="this is sonu here";
+// $file=fopen($filename,"w") or die("unable to create file");
+// fwrite($file,$content);
+// fclose($file);
+// echo "file created";
+
+// file created
+// echo "Enter any file name";
+// $filename=$_POST['TEXT'];
+// $file=fopen("$filename","w ");
+// fwrite($file,"this is sonu here");
+// fclose($file);
+// echo "file create sucessfully";
+
+// file read
+// $filename="files/sonu.txt";
+// $file=fopen("$filename","r");
+// echo fread($file,filesize($filename));
+// fclose($file);
+
+// json ->convert obj to array or array convert to object
+// $data=["name"=>"sonu","Age"=>"20","city"=>"bhagalpur"];
+// $datajson=json_encode($data);
+// print_r($datajson);
+?>
