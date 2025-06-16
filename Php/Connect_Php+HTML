@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Login</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form method="GET" action="login.php">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+
+  // php  file
+  <?php
+// GET method se data uthana
+$username = $_GET['username'];
+$password = $_GET['password'];
+
+
+?>
