@@ -1,0 +1,9 @@
+<?php
+// //for each
+// $name=["sonu","boss","krishna"];
+// foreach ($name as $key)
+// {
+//    echo $key;
+// }
+
+
