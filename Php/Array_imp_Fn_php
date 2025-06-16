@@ -1,0 +1,69 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+</head>
+<body>
+    <h4>Enter any file name</h4>
+     <form action="" method="post">
+      <input type="text" name="TEXT" placeholder="Enter any file name" >
+      <br>
+      <br>
+      <button type="submit" name="sub" style="background-color:red;" >click to genertae file</button>
+      </form> -->
+<!-- </body>
+</html> --> 
+
+<?php
+// date_default_timezone_set("Asia/Kolkata");
+// echo date("d M y");
+// echo date("h:i");
+
+// important php array fn
+// is_array(),count(),unset(),
+// $name=["sonu","boss","peter","england","allen","solly"];
+// if(is_array($name))
+// {
+//    echo "this is an array";
+// }
+// else
+// {
+//     echo "this is not an arrays";
+// }
+
+// echo count($name); //count the arrays elements in arrays
+
+// unset($name[2]);// delete the elements in arrays
+
+// array_push($name,"germany"); //add the elements in arrays
+
+// array_pop($name);//delete the elements from arrays
+
+// echo implode($name); //converted into strings format
+
+// array_splice($name,-3);//delete the 3 elements from arrays in stack format
+
+// $str="hlw i am sonu";
+// print_r(explode(" ",$str));//convert string into arrays.
+
+// $str="hlw,this,is,sonu,here";
+// print_r(explode(",",$str));//convert string into arrays.
+
+
+// $name=array_keys($name);
+// print_r($name);
+
+// $name1=["sonu","boss","peter","england","allen","solly"];
+
+// $name2=["s","b","p","e","a","s"];
+
+// print_r(array_merge($name1,$name2));//merge the arrays.
+
+
+// $name1=["sonu","boss","sonu","england","allen","boss"];
+// $uniquename=array_unique($name1);         //Converted Duplicate data array to unique array data.
+// print_r($uniquename);
+
+?>
